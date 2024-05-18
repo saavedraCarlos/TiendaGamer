@@ -16,7 +16,7 @@ if(!isset($_SESSION['nombre'])) {
 <body>
     <div class="container">
         <?php
-        session_start();
+        //session_start();
 
         include 'header.php';
 
