@@ -17,11 +17,9 @@ $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$passwo
 $result = $db->query($sql);
 
 if ($result->num_rows > 0) {
-  
-    $_SESSION['username'] = $username;
+  $_SESSION['username'] = $username;
     header('Location: bienvenido.php');
 } else {
-
     $_SESSION['error_message'] = 'Usuario o contraseña incorrectos.';
     header('Location: login.php');
 }

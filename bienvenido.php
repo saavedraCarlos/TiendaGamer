@@ -1,7 +1,8 @@
 <?php
 session_start();
-if(!isset($_SESSION['nombre'])) {
-   header('Location:login.php');
+if (!isset($_SESSION['username'])) {
+    header('Location: login.php');
+    exit();
 }
 ?>
 
@@ -16,17 +17,14 @@ if(!isset($_SESSION['nombre'])) {
 <body>
     <div class="container">
         <?php
-        //session_start();
-
         include 'header.php';
 
-        if(isset($_SESSION['nombre'])) {
-            $nombre = $_SESSION['nombre'];
-            echo "<h2>Bienvenido, $nombre!</h2>";
-
-            echo "<a href='CerrarSesion.php'>Cerrar sesion</a>";
+        if (isset($_SESSION['username'])) {
+            $username = $_SESSION['username'];
+            echo "<h2>Bienvenido, $username!</h2>";
+            echo "<a href='CerrarSesion.php'>Cerrar sesión</a>";
         } else {
-            echo "<h2 class='error-message'>Primero debes inciciar sesion.</h2>";
+            echo "<h2 class='error-message'>Primero debes iniciar sesión.</h2>";
         }
         ?>
     </div>
