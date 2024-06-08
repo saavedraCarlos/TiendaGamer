@@ -14,7 +14,7 @@
         </div>
         <div class="buttons">
             <a href="login.php" class="btn">Iniciar Sesión</a>
-            <a href="juegos.php" class="btn">Explorar Juegos</a>
+            <a href="registro.php" class="btn">Registrarse</a>
         </div>
     </div>
 </body>

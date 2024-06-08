@@ -9,7 +9,7 @@ $_SESSION = array();
 
 // Finalmente, destruir la sesión.
 session_destroy();
-header('Location:login.php');
+header('Location:index.php');
 ?>
 
 
